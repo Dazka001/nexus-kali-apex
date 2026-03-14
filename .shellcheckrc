@@ -1,0 +1,4 @@
+shell=bash
+severity=warning
+disable=SC1090,SC1091
+enable=require-variable-braces

@@ -1,0 +1,31 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Runtime
+*.log
+*.pid
+*.lock
+tmp/
+cache/
+
+# Seguridad
+*.key
+*.pem
+*.env
+.env.*
+credentials/
+secrets/
+
+# Build
+dist/
+build/
+coverage/
+
+# Termux
+*.bak
