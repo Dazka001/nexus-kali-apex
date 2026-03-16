@@ -41,3 +41,6 @@ Los documentos en `docs/governance/` son la fuente de verdad:
 ## Licencia
 
 MIT © 2026
+=======
+# nexus-kali-apex
+Created to store the nexus-kali project
