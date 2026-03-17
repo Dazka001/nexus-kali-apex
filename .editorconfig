@@ -1,21 +1,57 @@
+# EditorConfig — NEXUS-KALI APEX
+# https://editorconfig.org
+
 root = true
 
+# ─── Default ───────────────────────────────────────────────
 [*]
+charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-charset = utf-8
 trim_trailing_whitespace = true
-
-[*.sh]
 indent_style = space
 indent_size = 4
 
+# ─── Shell scripts ─────────────────────────────────────────
+[*.sh]
+indent_style = space
+indent_size = 4
+shell_variant = bash
+binary_next_line = true
+switch_case_indent = true
+
+# ─── Markdown ──────────────────────────────────────────────
 [*.md]
 trim_trailing_whitespace = false
-
-[*.{yml,yaml}]
-indent_style = space
 indent_size = 2
 
+# ─── JSON / Schemas ────────────────────────────────────────
+[*.json]
+indent_size = 2
+
+# ─── CSV ───────────────────────────────────────────────────
+[*.csv]
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ─── YAML (CI/CD configs) ─────────────────────────────────
+[*.{yml,yaml}]
+indent_size = 2
+
+# ─── BATS tests ───────────────────────────────────────────
+[*.bats]
+indent_style = space
+indent_size = 4
+
+# ─── Makefiles ─────────────────────────────────────────────
 [Makefile]
 indent_style = tab
+
+# ─── Git configs ───────────────────────────────────────────
+[.git*]
+indent_size = 4
+
+# ─── Message catalogs ─────────────────────────────────────
+[*.msg]
+charset = utf-8
+indent_size = 4

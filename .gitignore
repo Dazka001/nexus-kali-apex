@@ -1,31 +1,66 @@
-# OS / Editor
+# ══════════════════════════════════════════════════════════════
+# NEXUS-KALI APEX — .gitignore
+# ══════════════════════════════════════════════════════════════
+
+# ─── OS artifacts ──────────────────────────────────────────
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
 *~
+.nfs*
+
+# ─── Editor / IDE ─────────────────────────────────────────
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+.vim/
+*.kate-swp
 
-# Runtime
+# ─── Runtime / XDG generated ──────────────────────────────
+# Nexus XDG directories (generated at runtime)
+.cache/nexus-kali/
+.local/share/nexus-kali/
+.config/nexus-kali/
+.local/state/nexus-kali/
+
+# ─── Registry data (local, not committed) ─────────────────
+registry/
+*.registry.json
+
+# ─── Logs ──────────────────────────────────────────────────
 *.log
-*.pid
-*.lock
-tmp/
-cache/
+logs/
 
-# Seguridad
+# ─── Temporary / build artifacts ──────────────────────────
+tmp/
+.tmp/
+*.tmp
+*.bak
+*.orig
+*.lock
+
+# ─── Test artifacts ────────────────────────────────────────
+tests/output/
+tests/results/
+coverage/
+.nyc_output/
+*.tap
+
+# ─── Checksums (generated, not source) ────────────────────
+checksums.sha256
+
+# ─── Compiled / packed ────────────────────────────────────
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# ─── Secrets (NUNCA commitear) ────────────────────────────
+.env
+.env.*
 *.key
 *.pem
-*.env
-.env.*
-credentials/
+*.crt
 secrets/
-
-# Build
-dist/
-build/
-coverage/
-
-# Termux
-*.bak

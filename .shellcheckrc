@@ -1,4 +1,40 @@
+# ShellCheck configuration — NEXUS-KALI APEX
+# https://www.shellcheck.net/wiki/
+
+# ─── Shell dialect ─────────────────────────────────────────
 shell=bash
-severity=warning
-disable=SC1090,SC1091
-enable=require-variable-braces
+
+# ─── Enforced rules ───────────────────────────────────────
+# Todas las variables deben estar entre comillas dobles
+# a menos que haya una razón documentada para no hacerlo.
+enable=require-double-brackets
+
+# ─── Excluded rules ───────────────────────────────────────
+# SC2034: Variable appears unused (guards, exported constants)
+# SC1091: Not following sourced file (dynamic sourcing)
+# SC2155: Declare and assign separately (convenience pattern)
+disable=SC2034,SC1091,SC2155
+
+# ─── Source path ───────────────────────────────────────────
+source-path=lib
+source-path=lib/core
+source-path=lib/spec
+source-path=lib/spec/detectors
+source-path=lib/logging
+source-path=lib/security
+source-path=lib/validation
+source-path=lib/config
+source-path=lib/utils
+source-path=lib/db
+source-path=lib/network
+source-path=lib/deps
+source-path=lib/hooks
+source-path=lib/process
+source-path=lib/advanced
+source-path=lib/enterprise
+source-path=lib/ui
+source-path=lib/compat
+source-path=tests
+
+# ─── External sources ─────────────────────────────────────
+external-sources=true
